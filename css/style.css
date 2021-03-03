@@ -483,6 +483,21 @@ main {
   -webkit-transform: translate3d(-50%, -40%, 0);
           transform: translate3d(-50%, -40%, 0); }
 
+.nav-menu-active .search-wrap {
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.webp .nav-menu-active .search-wrap {
+  background-image: url("../img/bg/rain.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .nav-menu-active .search-wrap {
+      background-image: url("../img/bg/rain@2x.webp"); } }
+
+.no-webp .nav-menu-active .search-wrap {
+  background-image: url("../img/bg/rain.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .nav-menu-active .search-wrap {
+      background-image: url("../img/bg/rain@2x.png"); } }
+
 .search {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -604,8 +619,6 @@ main {
   transition-property: visibility, opacity;
   -webkit-transition-duration: .15s;
           transition-duration: .15s;
-  background-color: rgba(255, 255, 255, 0.4);
-  background-image: url("../img/bg/rain.png");
   z-index: 5; }
   .modal-overlay--show {
     opacity: 1;
