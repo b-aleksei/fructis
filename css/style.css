@@ -579,6 +579,9 @@ main {
   transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.3, 1);
   transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.3, 1), -webkit-transform 0.6s cubic-bezier(0.25, 0.1, 0.3, 1);
   z-index: 10; }
+  @media (max-width: 768px) {
+    .nav-wrap {
+      height: 229px; } }
 
 .nav {
   position: relative;
@@ -593,6 +596,12 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (max-width: 768px) {
+    .nav {
+      padding: 0 20px;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; } }
   .nav::before, .nav::after {
     top: 0;
     content: "";
@@ -602,14 +611,24 @@ main {
     -webkit-box-shadow: 0 0 50px rgba(128, 128, 128, 0.2);
             box-shadow: 0 0 50px rgba(128, 128, 128, 0.2);
     background-color: #FFF; }
+    @media (max-width: 768px) {
+      .nav::before, .nav::after {
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); } }
   .nav::before {
     top: 0;
     left: 0;
     border-radius: 50px 0 0 0; }
+    @media (max-width: 768px) {
+      .nav::before {
+        border-radius: 6px 0 0 0; } }
   .nav::after {
     top: 0;
     right: 0;
     border-radius: 0 50px 0 0; }
+    @media (max-width: 768px) {
+      .nav::after {
+        border-radius: 0 6px 0 0; } }
 
 .nav__mask {
   position: absolute;
@@ -620,6 +639,10 @@ main {
   .nav__mask img {
     -webkit-filter: drop-shadow(0 0 50px rgba(128, 128, 128, 0.2));
             filter: drop-shadow(0 0 50px rgba(128, 128, 128, 0.2)); }
+    @media (max-width: 768px) {
+      .nav__mask img {
+        -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+                filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25)); } }
   .nav__mask::before, .nav__mask::after {
     content: "";
     position: absolute;
@@ -673,10 +696,56 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 3; }
+  @media (max-width: 768px) {
+    .nav__list {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin-top: 43px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      background-color: white; } }
+
+@media (max-width: 768px) {
+  .nav__item {
+    width: 50%; } }
+
+@media (max-width: 768px) {
+  .nav__item--back {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .nav__item--search {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin-top: 10; }
+    .nav__item--search svg {
+      width: 30px; } }
+
+@media (max-width: 768px) {
+  .nav__item--fruits, .nav__item--vegetables {
+    margin-bottom: 39px; }
+    .nav__item--fruits svg, .nav__item--vegetables svg {
+      width: 43px; } }
+
+@media (max-width: 768px) {
+  .nav__item--info svg {
+    width: 38px; } }
+
+@media (max-width: 768px) {
+  .nav__item--cart svg {
+    width: 33px; } }
 
 .nav__link {
   display: block;
   max-width: 57px; }
+  @media (max-width: 768px) {
+    .nav__link {
+      margin: auto; } }
 
 .nav-menu-active .nav-wrap {
   -webkit-transform: translate3d(-50%, -100%, 0);
