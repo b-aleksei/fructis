@@ -756,40 +756,54 @@ main {
       -ms-flex-pack: center;
           justify-content: center; }
   .contact__thumbs-item button {
-    padding: 0; }
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom-color 0.3s;
+    transition: border-bottom-color 0.3s; }
+    @media (max-width: 1680px) {
+      .contact__thumbs-item button {
+        padding: 0 0 10px 0; } }
 
-.thumb-info svg {
-  width: 60px;
-  height: 60px;
-  fill: #EA1E1E; }
-  @media (max-width: 1680px) {
-    .thumb-info svg {
-      width: 40px;
-      height: 40px; } }
+.thumb-info {
+  color: #EA1E1E; }
+  .thumb-info svg {
+    width: 60px;
+    height: 60px;
+    fill: #EA1E1E; }
+    @media (max-width: 1680px) {
+      .thumb-info svg {
+        width: 40px;
+        height: 40px; } }
 
-.thumb-credit-card svg {
-  width: 70px;
-  height: 56px; }
-  @media (max-width: 1680px) {
-    .thumb-credit-card svg {
-      width: 50px;
-      height: 36px; } }
+.thumb-credit-card {
+  color: #FE7A00; }
+  .thumb-credit-card svg {
+    width: 70px;
+    height: 56px; }
+    @media (max-width: 1680px) {
+      .thumb-credit-card svg {
+        width: 50px;
+        height: 36px; } }
 
-.thumb-ship svg {
-  width: 59px;
-  height: 58px; }
-  @media (max-width: 1680px) {
-    .thumb-ship svg {
-      width: 39px;
-      height: 38px; } }
+.thumb-ship {
+  color: #51971A; }
+  .thumb-ship svg {
+    width: 59px;
+    height: 58px; }
+    @media (max-width: 1680px) {
+      .thumb-ship svg {
+        width: 39px;
+        height: 38px; } }
 
-.thumb-house svg {
-  width: 62px;
-  height: 56px; }
-  @media (max-width: 1680px) {
-    .thumb-house svg {
-      width: 42px;
-      height: 36px; } }
+.thumb-house {
+  color: #A66FE5; }
+  .thumb-house svg {
+    width: 62px;
+    height: 56px; }
+    @media (max-width: 1680px) {
+      .thumb-house svg {
+        width: 42px;
+        height: 36px; } }
 
 .contact__btn-map {
   margin-top: 37px;
@@ -798,6 +812,9 @@ main {
   @media (max-width: 1680px) {
     .contact__btn-map {
       margin: 10px 0 30px 0; } }
+
+.swiper-slide-thumb-active button {
+  border-bottom: 2px solid currentColor; }
 
 .nav-container {
   position: absolute;
