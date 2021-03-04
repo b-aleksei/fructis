@@ -1008,6 +1008,7 @@ main {
     width: 33px; } }
 
 .nav__link {
+  padding: 0;
   display: block;
   max-width: 57px; }
   @media (max-width: 768px) {
