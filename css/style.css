@@ -241,7 +241,10 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  width: 47%; }
+  width: Max(Min(903px, 47%), 766px); }
+  @media (max-width: 768px) {
+    .main-lime {
+      width: 100%; } }
 
 .main-text {
   position: absolute;
@@ -250,6 +253,10 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 80%; }
+  @media (max-width: 768px) {
+    .main-text {
+      top: initial;
+      margin-top: 60%; } }
 
 .fruits-slider {
   position: relative;
