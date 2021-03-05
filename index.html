@@ -6,12 +6,11 @@
   <title>Главная</title>
       <link rel="stylesheet" href="css/style.min.css">
   </head>
-
 <body class="">
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-slide" viewBox="0 0 42 40">
-<path d="M0.5394 18.3429L12.0823 2.2C13.0537 0.828572 14.6251 0 16.3108 0C20.568 0 23.0251 4.8 20.568 8.25715L12.1966 20L20.568 31.7429C23.0537 35.2 20.568 40 16.3108 40C14.6251 40 13.0251 39.1715 12.0537 37.8L0.510828 21.6572C-0.174887 20.6572 -0.174885 19.3429 0.5394 18.3429Z" fill="#BCD3FF"/>
-<path d="M20.5394 18.3429L32.0537 2.2C33.0537 0.828572 34.6251 0 36.3108 0C40.568 0 43.0537 4.8 40.568 8.25715L32.1966 20L40.568 31.7429C43.0537 35.2 40.568 40 36.3108 40C34.6251 40 33.0251 39.1715 32.0537 37.8L20.5108 21.6572C19.8251 20.6572 19.8251 19.3429 20.5394 18.3429Z" fill="#BCD3FF"/>
+<path d="M0.5394 18.3429L12.0823 2.2C13.0537 0.828572 14.6251 0 16.3108 0C20.568 0 23.0251 4.8 20.568 8.25715L12.1966 20L20.568 31.7429C23.0537 35.2 20.568 40 16.3108 40C14.6251 40 13.0251 39.1715 12.0537 37.8L0.510828 21.6572C-0.174887 20.6572 -0.174885 19.3429 0.5394 18.3429Z" fill="#FE7A00"/>
+<path d="M20.5394 18.3429L32.0537 2.2C33.0537 0.828572 34.6251 0 36.3108 0C40.568 0 43.0537 4.8 40.568 8.25715L32.1966 20L40.568 31.7429C43.0537 35.2 40.568 40 36.3108 40C34.6251 40 33.0251 39.1715 32.0537 37.8L20.5108 21.6572C19.8251 20.6572 19.8251 19.3429 20.5394 18.3429Z" fill="#FE7A00"/>
 </symbol><symbol id="bag" viewBox="0 0 38 44">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 2.93333C3.57743 2.93333 2.92308 3.58998 2.92308 4.4V39.6C2.92308 40.41 3.57743 41.0667 4.38462 41.0667H33.6154C34.4226 41.0667 35.0769 40.41 35.0769 39.6V4.4C35.0769 3.58998 34.4226 2.93333 33.6154 2.93333H4.38461ZM0 4.4C0 1.96995 1.96306 0 4.38461 0H33.6154C36.0369 0 38 1.96995 38 4.4V39.6C38 42.0301 36.0369 44 33.6154 44H4.38462C1.96306 44 0 42.0301 0 39.6V4.4ZM11.6923 5.86667L11.6923 13.2C11.6923 17.2501 14.9641 20.5333 19 20.5333C23.0359 20.5333 26.3077 17.2501 26.3077 13.2L26.3077 5.86667L29.2308 5.86667L29.2308 13.2C29.2308 18.8701 24.6503 23.4667 19 23.4667C13.3497 23.4667 8.76923 18.8701 8.76923 13.2L8.76923 5.86667H11.6923Z" fill="#75A4FF"/>
 </symbol><symbol id="chevron-left" viewBox="0 0 44 44">
@@ -70,7 +69,7 @@
   </div>
   </main>
 
-  <div id="search-modal" class="search-wrap modal">
+  <div id="search-modal" class="search-wrap modal" data-active-class="search-menu-active">
   <form onsubmit="return false" class="search modal__wrap" method="post" action="https://jsonplaceholder.typicode.com/posts"
         autocomplete="on">
     <label class="search__field">
@@ -99,12 +98,12 @@
         </a>
       </li>
       <li class="nav__item nav__item--search">
-        <a class="nav__link" href="#" aria-label="поиск по сайту" data-modal-open="search-modal">
+        <button class="nav__link nav__link-search" type="button" aria-label="поиск по сайту">
             <svg width="44" height="44">
     <use href="#search"></use>
   </svg>
 
-        </a>
+        </button>
       </li>
       <li class="nav__item nav__item--fruits">
         <a class="nav__link" href="fruits-slider.html" aria-label="каталог фруктов">
@@ -115,7 +114,7 @@
         </a>
       </li>
       <li class="nav__item nav__item--vegetables">
-        <a class="nav__link" href="fruits-slider.html" aria-label="каталог овощей">
+        <a class="nav__link" href="veg-slider.html" aria-label="каталог овощей">
             <svg width="56" height="57">
     <use href="#vegetables"></use>
   </svg>
