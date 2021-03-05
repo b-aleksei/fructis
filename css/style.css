@@ -547,6 +547,35 @@ main {
     .cart__img-wrap {
       display: none; } }
 
+.cart__content-wrap {
+  position: relative; }
+  .cart__content-wrap::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 105px;
+    height: 100px;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    background: url("../img/bg/leaf2.png") center/contain no-repeat;
+    z-index: 1; }
+    @media (max-width: 1280px) {
+      .cart__content-wrap::before {
+        top: 30px; } }
+    @media (max-width: 768px) {
+      .cart__content-wrap::before {
+        top: 40px;
+        left: -40px; } }
+  .cart__content-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 145px;
+    height: 135px;
+    background: url("../img/bg/leaf2.png") center/contain no-repeat; }
+
 .cart__content {
   position: relative;
   min-height: 600px;
@@ -563,51 +592,47 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../img/bg/list-top.png") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.png") 0 68px/100% 100% no-repeat; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .cart__content {
-      background: url("../img/bg/list-top@2x.png") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.png") 0 68px/100% 100% no-repeat; } }
-  @media (max-width: 1280px) {
-    .cart__content {
-      padding: 120px 50px 80px; } }
-  @media (max-width: 768px) {
-    .cart__content {
-      min-height: initial;
-      padding: 120px 30px 60px; } }
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 71px;
+  background-image: url("../img/bg/list.png"); }
   .cart__content::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: -20px;
-    width: 105px;
-    height: 100px;
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-    background: url("../img/bg/leaf2.png") center/contain no-repeat; }
+    top: 0;
+    left: 11px;
+    width: calc(100% - 30px);
+    height: 138px;
+    background-size: 100% auto;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg/list-top.png"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .cart__content::before {
+        background-image: url("../img/bg/list-top@2x.png"); } }
     @media (max-width: 768px) {
       .cart__content::before {
-        top: -20px;
-        left: -40px; } }
-  .cart__content::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 145px;
-    height: 135px;
-    background: url("../img/bg/leaf2.png") center/contain no-repeat; }
+        background-size: 390px auto; } }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .cart__content {
+      background-image: url("../img/bg/list-top@2x.png"), url("../img/bg/list.png"); } }
+  @media (max-width: 1280px) {
+    .cart__content {
+      padding: 120px 50px 80px;
+      background-position: 0 83px; } }
+  @media (max-width: 768px) {
+    .cart__content {
+      min-height: initial;
+      padding: 120px 30px 60px;
+      background-position: 0 96px; } }
 
 .webp .cart__content {
-  background: url("../img/bg/list-top.webp") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.webp") 0 68px/100% 100% no-repeat; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .webp .cart__content {
-      background: url("../img/bg/list-top@2x.webp") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.webp") 0 68px/100% 100% no-repeat; } }
-  @media (max-width: 676px) {
-    .webp .cart__content {
-      background: url("../img/bg/list-top.webp") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.webp") right 0 -6%/100% 100% no-repeat; } }
-  @media (max-width: 676px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 676px) and (min-resolution: 144dpi), (max-width: 676px) and (min-resolution: 1.5dppx) {
-    .webp .cart__content {
-      background: url("../img/bg/list-top@2x.webp") 11px 0/calc(100% - 30px) auto no-repeat, url("../img/bg/list.webp") 0 68px/100% 100% no-repeat; } }
+  background-image: url("../img/bg/list.webp"); }
+  .webp .cart__content::before {
+    background-image: url("../img/bg/list-top.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .webp .cart__content::before {
+        background-image: url("../img/bg/list-top@2x.webp"); } }
 
 .cart__btn-buy {
   margin-top: auto;
@@ -615,6 +640,7 @@ main {
 
 .order {
   width: 100%;
+  margin-top: 20px;
   margin-bottom: 46px;
   font-size: 25px;
   color: #7A7A7A;
