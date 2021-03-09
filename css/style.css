@@ -333,12 +333,13 @@ main {
   color: #FE7A00; }
   @media (max-width: 1024px) {
     .fruits-slider__description {
-      margin: 50px 0 50px 0; } }
+      margin: 50px 0; } }
   @media (max-width: 768px) {
     .fruits-slider__description {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      margin: 30px 0;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -811,13 +812,14 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 40.45%;
-  padding-top: 100px; }
+  padding-top: 100px;
+  padding-bottom: 80px; }
   @media (max-width: 1680px) {
     .contact__content-wrap {
       padding-top: 80px; } }
   @media (max-width: 1024px) {
     .contact__content-wrap {
-      padding: 0;
+      padding-top: 0;
       width: 70%; } }
   @media (max-width: 575px) {
     .contact__content-wrap {
@@ -840,7 +842,7 @@ main {
         left: -40px; } }
   .contact__content-wrap::after {
     position: absolute;
-    bottom: -100px;
+    bottom: -30px;
     right: -150px;
     width: 145px;
     height: 135px;
@@ -850,7 +852,7 @@ main {
         content: ""; } }
     @media (max-width: 768px) {
       .contact__content-wrap::after {
-        bottom: -150px;
+        bottom: -60px;
         right: -60px; } }
 
 .contact__content {
