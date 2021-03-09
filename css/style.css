@@ -260,6 +260,7 @@ main {
       margin-top: 60%; } }
 
 .fruit-slider-wrap {
+  padding-bottom: 80px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
